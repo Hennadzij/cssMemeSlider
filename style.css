@@ -4,10 +4,10 @@
     padding: 0;
 }
 section{
-    width: 700px;
+    width: 43.75rem;
     background-color: rgb(215, 250, 227);
-    margin: 20px auto 0;
-    padding: 30px 50px;
+    margin: 1.25rem auto 0;
+    padding: 1.875rem 3.125rem;
 }
 .slider {
     overflow: hidden;
@@ -20,33 +20,34 @@ section{
 }
 .slider__item{
     width: 25%;
-    max-height: 750px;
+    max-height: 46.875rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     transition: 0.5s all ease-out;
 }
 .slider__item-img{
-    width: 400px;
-    height: 600px;
+    width: 25rem;
     overflow: hidden;
+
 }
 .slider__item-img img{
     width: 100%;
+    object-fit: fill;
 }
 .slider__item-text{
     text-align: center;
-    font-size: 22px;
+    font-size: 1.375rem;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 30px 0 0 0;
+    margin: 1.875rem 0 0 0;
 }
 input[name="radio"]{
     display: none;
 }
 .dot{
-    width: 15px;
-    height: 15px;
-    margin: 3px;
+    width: 0.9375rem;
+    height: 0.9375rem;
+    margin: 0.1875rem;
     background-color: rgb(0, 128, 0);
     border-radius: 100%;
     border: 1px solid rgb(0, 0, 0);
@@ -59,6 +60,7 @@ label:hover .dot{
 .labels {
     display: flex;
     justify-content: center;
+    margin: 1.5rem 0 0 0;
 }
 
 #first:checked ~ .slider .slider__block .slide-show {
@@ -82,4 +84,20 @@ label:hover .dot{
 #third:checked ~ .labels label .dot3,
 #fourth:checked ~ .labels label .dot4 {
     background-color: rgb(130, 252, 177);
+}
+@media (max-width: 43.75rem){
+    section{
+        width: 90%;
+        margin: 1rem auto;
+        padding: 1rem 1.5rem;
+    }
+    .slider__item-img{
+        width: 100%;
+        max-height: 43.75rem;
+    }
+}
+@media (max-width: 31.25rem){
+    .slider__item-img{
+        max-height: 31.25rem;
+    }
 }
