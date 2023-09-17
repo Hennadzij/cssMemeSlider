@@ -52,6 +52,7 @@ input[name="radio"]{
     border-radius: 100%;
     border: 1px solid rgb(0, 0, 0);
     transition: all 0.5s ease-in-out;
+    padding: 0.25rem;
 }
 label:hover .dot{
     background-color: rgb(176, 110, 238);
@@ -85,7 +86,23 @@ label:hover .dot{
 #fourth:checked ~ .labels label .dot4 {
     background-color: rgb(130, 252, 177);
 }
+#first:focus ~ .labels label .dot1,
+#second:focus ~ .labels label .dot2,
+#third:focus ~ .labels label .dot3,
+#fourth:focus ~ .labels label .dot4 {
+    background-color: rgb(206, 45, 45);
+}
+#first:active ~ .labels label .dot1,
+#second:active ~ .labels label .dot2,
+#third:active ~ .labels label .dot3,
+#fourth:active ~ .labels label .dot4 {
+    background-color: rgb(212, 20, 139);
+}
+
 @media (max-width: 43.75rem){
+    html {
+        font-size: 1rem;
+    }
     section{
         width: 90%;
         margin: 1rem auto;
