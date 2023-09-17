@@ -16,11 +16,15 @@ section{
 .slider__block{
     display: flex;
     width: 400%;
+    justify-content: center;
 }
 .slider__item{
     width: 25%;
     max-height: 750px;
-    margin: 0 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 0.5s all ease-out;
 }
 .slider__item-img{
     width: 400px;
@@ -57,18 +61,25 @@ label:hover .dot{
     justify-content: center;
 }
 
-#first:checked ~ .slider .slider__block .slider__item {
+#first:checked ~ .slider .slider__block .slide-show {
     margin-left: 0%;
 }
 
-#second:checked ~ .slider .slider__block .slider__item {
-    margin-left: -25%;
-}
-
-#third:checked ~ .slider .slider__block .slider__item {
+#second:checked ~ .slider .slider__block .slide-show {
     margin-left: -50%;
 }
 
-#fourth:checked ~ .slider .slider__block .slider__item {
-    margin-left: -75%;
+#third:checked ~ .slider .slider__block .slide-show {
+    margin-left: -100%;
+}
+
+#fourth:checked ~ .slider .slider__block .slide-show{
+    margin-left: -150%;
+}
+
+#first:checked ~ .labels label .dot1,
+#second:checked ~ .labels label .dot2,
+#third:checked ~ .labels label .dot3,
+#fourth:checked ~ .labels label .dot4 {
+    background-color: rgb(130, 252, 177);
 }
